@@ -30,9 +30,12 @@ select {
 }
 
 input[type="textarea"] {
+    width: 100%;
     padding: 10px;
     margin-bottom: 6px;
     font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 input[type="number"] {
@@ -51,6 +54,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 .submit-button {
@@ -73,4 +77,39 @@ input[type=number] {
 button {
     /* padding-left: 50px; */
     height: 40px;
+}
+
+.image-preview-item {
+    display: inline-block;
+    position: relative;
+    margin: 5px;
+    /* width: 50px; */
+}
+
+.it {
+    height: 100px;
+    margin-left: 10px;
+}
+
+.btn-rmv1 {
+    display: none;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+    background: rgb(255, 0, 0);
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    font-weight: bold;
+}
+
+.delete-button:hover {
+    background: rgba(255, 0, 0, 0.5);
 }
