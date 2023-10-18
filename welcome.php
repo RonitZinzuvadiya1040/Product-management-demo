@@ -14,7 +14,7 @@
         <input type="file" name="image[]" id="image" multiple accept="image/*" />
         <p>Max file size: 2MB per image</p>
 
-        <div id="image-preview"></div>
+        <div id="image-preview" src="" class="preview1"></div>
 
         <input type="submit" value="Upload Images" />
     </form>

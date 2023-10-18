@@ -34,12 +34,3 @@ function confirmDelete(productId) {
         }
     });
 }
-
-function editProduct(productId) {
-    // alert(productId);
-    // exit;
-    // header("Location: edit-product.php");
-    location.href = "edit-product.php";
-    // console.log(productId);
-    return productId;
-}

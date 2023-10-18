@@ -1,26 +1,36 @@
-document.getElementById("product_image").addEventListener("change", function () {
-    var imagePreview = document.getElementById("image-preview");
-    imagePreview.innerHTML = "";
+function imagerender() {
+    document.getElementById('product_image').addEventListener('change', function (e) {
+        const previewDiv = document.getElementById('image-preview');
+        previewDiv.innerHTML = '';
 
-    for (var i = 0; i < this.files.length; i++) {
-        var file = this.files[i];
+        for (let i = 0; i < e.target.files.length; i++) {
+            const file = e.target.files[i];
+            if (file.size <= 2097152) { // 2MB in bytes
+                const container = document.createElement('div');
+                container.classList.add('image-preview-item');
 
-        if (file.type.match('uploads.*')) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                var image = document.createElement("img");
-                image.src = e.target.result;
-                image.style.maxHeight = "200px";
-                image.style.maxWidth = "200px";
-                image.style.margin = "5px";
-                imagePreview.appendChild(image);
-            };
-            reader.readAsDataURL(file);
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                img.style.maxWidth = '100px'; // Adjust as needed
+                img.style.maxHeight = '100px'; // Adjust as needed
+
+                const deleteBtn = document.createElement('div');
+                deleteBtn.classList.add('delete-button');
+                deleteBtn.innerHTML = 'x';
+                deleteBtn.addEventListener('click', function () {
+                    container.remove(); // Remove the entire container (image + delete button)
+                });
+
+                container.appendChild(img);
+                container.appendChild(deleteBtn);
+                previewDiv.appendChild(container);
+            }
         }
-    }
-});
+    });
+}
 
-function success(){
+
+function success() {
     Swal.fire({
         title: 'Product added successfully!',
         text: '',
@@ -33,10 +43,3 @@ function success(){
         window.location.href = "view-product.php";
     });
 }
-
-// document.getElementById("submit").addEventListener("click", function (event) {
-//     event.preventDefault(); // Prevent the default form submission
-//     success();
-//     // Simulate a successful product addition
-    
-// });

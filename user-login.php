@@ -23,6 +23,9 @@
             <div class="mb-4">
                 <input type="submit" name="login" value="Login" id="login" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg">
             </div>
+            <div style="text-align: center">
+            Register <a href="registration.php" style="color: skyblue" id="register">here</a>
+            </div>
         </form>
         <?php if (isset($login_error)) : ?>
             <p class="text-red-500"><?php echo $login_error; ?></p>

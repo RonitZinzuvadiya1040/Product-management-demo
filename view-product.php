@@ -23,8 +23,9 @@ $result = mysqli_query($mysqli, $query);
 </head>
 
 <body>
-    <script src="js/view-product.js">
-    </script>
+    <script src="js/view-product.js"></script>
+    <script src="js/edit-product.js"></script>
+    <h1>Manage products</h1>
     <table id="productTable">
         <tr>
             <th class="image-column">Product Image</th>
