@@ -6,7 +6,7 @@
 
 <head>
     <title>Add Product</title>
-    <link rel="stylesheet" type="text/css" href="css/add-category-product.css" />
+    <link rel="stylesheet" type="text/css" href="css/add-product.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/add-product.js"></script>
 </head>
@@ -49,8 +49,9 @@
             <label for="product_image">Product Images:</label>
             <input type="file" name="product_image[]" id="product_image" accept="uploads/*" multiple />
             <h5>Max file size: 2MB per image</h5>
-            <div id="image-preview"></div>
-            <input type="submit" value="Upload Images" /><br><br>
+            <script>imagerender();</script>
+            <div id="image-preview" class="image-preview"></div>
+            <br><br>
 
             <div class="save-btn">
                 <button type="submit" value="Submit" id="submit" class="submit-button">Add</button>
