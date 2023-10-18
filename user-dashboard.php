@@ -1,6 +1,6 @@
 <?php
 include "user/session.php";
-include "navbar.php";
+// include "navbar.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include "navbar.php";
     <meta charset="UTF-8">
     <title>User Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
     <style>
         /* Basic CSS for the navbar */
         body {
@@ -51,25 +51,21 @@ include "navbar.php";
 </head>
 
 <body>
-    <h3>Manage Users</h3>
-    <hr>
-    <table id="users">
-        <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-        </tr>
-        <tr>
-            <td>Webmob</td>
-            <td>Ronit Zinzuvadiya</td>
-            <td>Ahmedabad</td>
-        </tr>
-        <tr>
-            <td>Webmob</td>
-            <td>Daksh Makawana</td>
-            <td>Ahmedabad</td>
-        </tr>
-    </table>
+    <!-- Rest of your dashboard content -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar">
+                <a class="hover-underline-animation" href="">Home</a>
+                <a class="hover-underline-animation" href="">Products</a>
+                <a class="hover-underline-animation" href="">My Product</a>
+                <a class="hover-underline-animation" href="">Cart</a>
+                <a class="hover-underline-animation" href="logout.php" id="logout">Logout</a>
+            </div>
+        </div>
+    </nav>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="js/logout.js"></script>
 
 </html>
