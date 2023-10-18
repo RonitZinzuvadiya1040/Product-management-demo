@@ -1,0 +1,56 @@
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* th, */
+td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    padding: 7px 12px;
+    font-size: 10px;
+}
+
+.image-column {
+    width: 100px;
+}
+
+.actions {
+    width: 120px;
+}
+
+.delete-button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* .submit-button:hover {
+    background-color: #0056b3;
+}
+
+.save-btn {
+    text-align: center;
+} */
+
+button {
+    /* padding-left: 50px; */
+    height: 30px;
+}
+
+.fa-trash-alt::before{
+    color: red;
+}
+
+.fa-edit::before{
+    color: rgb(0, 0, 0);
+}
