@@ -22,7 +22,7 @@ label {
 }
 
 input[type="text"],
-select {
+select, #product_image {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;

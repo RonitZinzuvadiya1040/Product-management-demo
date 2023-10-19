@@ -8,8 +8,9 @@
 <head>
     <title>Edit Product</title>
     <link rel="stylesheet" type="text/css" href="css/add-category-product.css" />
+    <link rel="stylesheet" type="text/css" href="css/add-product.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="js/add-product.js"></script>
+    <script src="js/edit-product.js"></script>
 </head>
 
 <body>
@@ -63,12 +64,12 @@
 
                         if (mysqli_stmt_execute($stmt)) {
                             // Redirect back to view-product.php after updating
-                            header('Location: view-product.php');
-                            exit;
+                            echo '<script>success();</script>';
+                            // header('Location: view-product.php');
+                            // exit;
                         } else {
                             echo "Error updating product: " . mysqli_error($mysqli);
                         }
-
                         mysqli_stmt_close($stmt);
                     }
                 }
