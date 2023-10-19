@@ -19,7 +19,8 @@ if (isset($_SESSION['admin'])) {
 
 <body>
     <!-- Rest of your dashboard content -->
-    <nav class="navbar navbar-inverse">
+    <div class="navbar-container">
+    <nav class="navbar navbar-inverse sticky">
         <div class="container-fluid">
             <div class="navbar">
                 <a class="hover-underline-animation" href="home.php">Home</a>
@@ -30,6 +31,7 @@ if (isset($_SESSION['admin'])) {
             </div>
         </div>
     </nav>
+    </div>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

@@ -3,12 +3,16 @@ function imagerender() {
         const previewDiv = document.getElementById('image-preview');
         previewDiv.innerHTML = '';
 
-        for (let i = 0; i < e.target.files.length; i++) {
+        console.log(e.target.files);
+        
+        for (let i = 0; i <= e.target.files.length; i++) {
             const file = e.target.files[i];
+            // console.log(file);
+            // console.log("----------------------------"+i);
             if (file.size <= 2097152) { // 2MB in bytes
                 const container = document.createElement('div');
                 container.classList.add('image-preview-item');
-
+                console.log(file);
                 const img = document.createElement('img');
                 img.src = URL.createObjectURL(file);
                 img.style.maxWidth = '100px'; // Adjust as needed
@@ -24,6 +28,9 @@ function imagerender() {
                 container.appendChild(img);
                 container.appendChild(deleteBtn);
                 previewDiv.appendChild(container);
+            }
+            else{
+                console.log("else");
             }
         }
     });

@@ -115,8 +115,17 @@
             <label for="product_image">Product Images:</label>
             <input type="file" name="product_image[]" id="product_image" accept="uploads/*" multiple />
             <h5>Max file size: 2MB per image</h5>
-            <div id="image-preview"></div>
-            <img src="<?php echo $product['image']; ?>" alt="Image" style="width: 60px; height: 50px; padding-left: 5px;">
+            <div id="image-preview">
+                <?php
+                // Split the image column into an array and display each image
+                $productImages = explode(',', $product['image']);
+                foreach ($productImages as $imagePath) {
+                    if (!empty($imagePath)) {
+                        echo '<img src="' . $imagePath . '" alt="Product Image" style="width: 90px; height: 90px; margin: 5px;" />';
+                    }
+                }
+                ?>
+            </div>
             <br><br>
 
             <div class="save-btn">

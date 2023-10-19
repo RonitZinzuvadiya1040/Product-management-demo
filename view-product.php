@@ -42,7 +42,8 @@ $result = mysqli_query($mysqli, $query);
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
 
-            $imagePath = "{$row['image']}";
+            $imagePaths = explode(',', $row['image']);
+            $firstImagePath = $imagePaths[0];
             // print $imagePath;
             // exit;
 
@@ -50,8 +51,8 @@ $result = mysqli_query($mysqli, $query);
             // exit;
             $category_name = $app->get_name($row['product_category']);
 
-            if (file_exists($imagePath)) {
-                echo '<td><img src="' . $imagePath . '" alt="Image" style="width: 60px; height: 50px; padding-left: 5px;"></td>';
+            if (file_exists($firstImagePath)) {
+                echo '<td><img src="' . $firstImagePath . '" alt="Image" style="width: 60px; height: 50px; padding-left: 5px;"></td>';
             } else {
                 echo "<td>Image not found</td>";
             }
