@@ -55,8 +55,10 @@ button {
 
 .fa-trash-alt::before{
     color: red;
+    cursor: pointer;
 }
 
 .fa-edit::before{
     color: rgb(0, 0, 0);
+    cursor: pointer;
 }

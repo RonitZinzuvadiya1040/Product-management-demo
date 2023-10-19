@@ -1,6 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+</head>
+
+</html>
+
 <?php
 include "admin/session.php";
 include "config/database.php";
+include "navbar.php";
 
 // $id = $_GET['id'];
 // echo $id;
@@ -34,16 +45,4 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     // Handle invalid or missing product ID
     echo "Invalid product ID.";
 }
-
-include "navbar.php";
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Delete Product</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
-</head>
-<body>
-    <!-- Your HTML content for the delete confirmation page, if needed -->
-</body>
-</html>
