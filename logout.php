@@ -2,12 +2,12 @@
 session_start();
 if (isset($_SESSION['user'])) {
     session_destroy();
-    header("Location: user-login.php");
+    header("Location: index.php");
 }
 
 if (isset($_SESSION['admin'])) {
     session_destroy();
-    header("Location: admin-login.php");
+    header("Location: index.php");
 }
 
 exit();
